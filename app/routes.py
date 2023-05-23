@@ -3,6 +3,7 @@ from app import app
 @app.route("/index")
 def index():
     return"Hello world!"
-@app.route("/name", defult= {/name/<name>})
+@app.route("/name", defult= {"name":"Anonim"})
+@app.route("/name/<name>")
 def name(name):
     return f"Hello {name}"
