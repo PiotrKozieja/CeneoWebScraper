@@ -1,0 +1,74 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="table-responsive-xl table-striped p-5">
+    <h3>{{product_code}}</h3>
+    <table id="product_table" class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>ID opini</th>
+                <th>Autor</th>
+                <th>Rekomendacja</th>
+                <th>Liczba Gwiazdek</th>
+                <th>Czy potwierdzone zakupem</th>
+                <th>Data wystawiena opini</th>
+                <th>Data zakupu</th>
+                <th>Przydatne</th>
+                <th>Nieprzydatne</th>
+                <th>Opinia</th>
+                <th>Wady</th>
+                <th>Zalety</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>17050830</td>
+                <td>m...w</td>
+                <td>Polecam</td>
+                <td>5</td>
+                <td>Opinia potwierdzona zakupem</td>
+                <td>2023-01-23 17:32:30</td>
+                <td>2023-01-16 11:32:28</td>
+                <td>0</td>
+                <td>0</td>
+                <td>Fantastyczny sprzęt. Nie zdawałem sobie sprawy ile potrafi ten zegarek. Zdecydowanie polecam. Wart swojej ceny.</td>
+                <td></td>
+                <td>czas pracy na baterii
+                    funkcjonalność
+                    wyświetlacz</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>15721707</td>
+                <td>m...z</td>
+                <td>Polecam</td>
+                <td>5</td>
+                <td>Opinia potwierdzona zakupem</td>
+                <td>2022-02-18 11:11:43</td>
+                <td>2022-02-11 19:54:03</td>
+                <td>2</td>
+                <td>1</td>
+                <td>Nie ma się co rozpisywać, najlepszy zegarek na rynku i tyle.</td>
+                <td></td>
+                <td>czas pracy na baterii
+                    funkcjonalność
+                    wyświetlacz</td>
+        </tbody>
+    </table>
+  </div>
+  <div class="m-5">
+    <button type="button" class="btn btn-primary">Pobierz plik json</button>
+    <button type="button" class="btn btn-primary" onclick="window.location='wykresy'">Wykresy</button>
+	</div>
+  
+{% endblock %}
+
+{% block js %}
+<script>
+    $(document).ready(function () {
+        $('#product_table').DataTable();
+    });
+</script>
+{% endblock %}

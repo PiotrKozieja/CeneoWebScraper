@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block title %}Opis projektu{% endblock %}
+{% block content %}
+<div class="container p-3 mb-2 bg-body-tertiary">
+  <h1 class="text-center mt-5">Opis</h1>
+  <hr>
+
+  <h2>Cel aplikacji</h2>
+  <p>Aplikacja ma za zadnaie pobierać opinie na temat danego produktu z serwisu Ceneo oraz umożliwić ich analizę.</p>
+
+  <h2>Opis działania aplikacji</h2>
+  <p>Poprzez podanie kodu produktu aplikacja pobiera opinie na jego temat z serwisu Ceneo wyszukując informacji na temat:
+      <ul class="list-group">
+          <li class="list-group-item">Autora opinii</li>
+          <li class="list-group-item">Recenzji</li>
+          <li class="list-group-item">Liczby gwiazdek</li>
+          <li class="list-group-item">Daty opinii oraz zakupu</li>
+          <li class="list-group-item">Wad i zalet</li>
+        </ul>
+        <br></br>
+        Następnie umożliwia analizę informacji na podstawie statystyk oraz wykresów
+  </p>
+
+  <h2>Zastosowane biblioteki</h2>
+  <p>W aplikacji wykorzystano następujące biblioteki: 
+      <ul class="list-group">
+          <li class="list-group-item">beautifulsoup4</li>
+          <li class="list-group-item">Flask</li>
+          <li class="list-group-item">matplotlib</li>
+          <li class="list-group-item">numpy</li>
+          <li class="list-group-item">pandas</li>
+          <li class="list-group-item">bootstrap</li>
+        </ul>
+  <h2>Zastosowane podejścia</h2>
+  <p>?</p>
+</div>
+{% endblock %}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ceneo Web Scraper</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Datatables CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!-- jQuery & Datatables -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</head>
+<main>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand">CeneoWebScraper</a>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{{url_for('index')}}">Strona główna</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="{{url_for('extract')}}">Pobierz produkt</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="{{url_for('product_list')}}">Lista produktów</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="{{url_for('author')}}">O autorze</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="container mb-5 pb-5">
+        <div class="row text-center">
+            <div class="col">
+                <h2>{% block title %}{% endblock %}</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+    <footer class="container alert alert-info fixed-bottom">
+        (c) Piotr Kozieja, Uniwersytet Ekonomiczny w Krakowie
+    </footer>
+    {% block scripts %}
+    {% endblock %}
+</body>
+</main>
+</html>
